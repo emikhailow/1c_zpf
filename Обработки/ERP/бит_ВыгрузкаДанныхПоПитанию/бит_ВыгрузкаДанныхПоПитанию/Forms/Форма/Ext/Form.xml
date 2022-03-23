@@ -1,0 +1,199 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Параметры выполнения регл. задания</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаСохранитьНастройкиРегламентногоЗадания" id="11">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.СохранитьНастройкиРегламентногоЗадания</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Сохранить настройки</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="ФормаСохранитьНастройкиРегламентногоЗаданияРасширеннаяПодсказка" id="12"/>
+			</Button>
+			<Button name="ФормаВыполнитьРегламентноеЗадание" id="9">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьРегламентноеЗадание</CommandName>
+				<ExtendedTooltip name="ФормаВыполнитьРегламентноеЗаданиеРасширеннаяПодсказка" id="10"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ДатаНачала" id="13">
+			<DataPath>Объект.ДатаНачала</DataPath>
+			<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ДатаОкончания" id="16">
+			<DataPath>Объект.ДатаОкончания</DataPath>
+			<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Склад" id="31">
+			<ContextMenu name="СкладКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="СкладРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<Table name="Склады" id="34">
+			<TitleLocation>Top</TitleLocation>
+			<Height>3</Height>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Склады</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="СкладыКонтекстноеМеню" id="35"/>
+			<AutoCommandBar name="СкладыКоманднаяПанель" id="36"/>
+			<ExtendedTooltip name="СкладыРасширеннаяПодсказка" id="37"/>
+			<SearchStringAddition name="СкладыСтрокаПоиска" id="38">
+				<AdditionSource>
+					<Item>Склады</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СкладыСтрокаПоискаКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="СкладыСтрокаПоискаРасширеннаяПодсказка" id="40"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СкладыСостояниеПросмотра" id="41">
+				<AdditionSource>
+					<Item>Склады</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СкладыСостояниеПросмотраКонтекстноеМеню" id="42"/>
+				<ExtendedTooltip name="СкладыСостояниеПросмотраРасширеннаяПодсказка" id="43"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СкладыУправлениеПоиском" id="44">
+				<AdditionSource>
+					<Item>Склады</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СкладыУправлениеПоискомКонтекстноеМеню" id="45"/>
+				<ExtendedTooltip name="СкладыУправлениеПоискомРасширеннаяПодсказка" id="46"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="СкладыНомерСтроки" id="47">
+					<DataPath>Объект.Склады.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СкладыНомерСтрокиКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="СкладыНомерСтрокиРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+				<InputField name="СкладыСклад" id="50">
+					<DataPath>Объект.Склады.Склад</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СкладыСкладКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="СкладыСкладРасширеннаяПодсказка" id="52"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="ИмяСервераИнформационнойБазыДляПодключения" id="19">
+			<DataPath>Объект.ИмяСервераИнформационнойБазыДляПодключения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИмяСервераИнформационнойБазыДляПодключенияКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ИмяСервераИнформационнойБазыДляПодключенияРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ИмяИнформационнойБазыНаСервереДляПодключения" id="22">
+			<DataPath>Объект.ИмяИнформационнойБазыНаСервереДляПодключения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>База</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ИмяИнформационнойБазыНаСервереДляПодключенияКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ИмяИнформационнойБазыНаСервереДляПодключенияРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ПользовательИнформационнойБазыДляПодключения" id="25">
+			<DataPath>Объект.ПользовательИнформационнойБазыДляПодключения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ПользовательИнформационнойБазыДляПодключенияКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ПользовательИнформационнойБазыДляПодключенияРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ПарольИнформационнойБазыДляПодключения" id="28">
+			<DataPath>Объект.ПарольИнформационнойБазыДляПодключения</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль</v8:content>
+				</v8:item>
+			</Title>
+			<PasswordMode>true</PasswordMode>
+			<ContextMenu name="ПарольИнформационнойБазыДляПодключенияКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="ПарольИнформационнойБазыДляПодключенияРасширеннаяПодсказка" id="30"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.бит_ВыгрузкаДанныхПоПитанию</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СохранитьНастройкиРегламентногоЗадания" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки регл. задания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки регламентного задания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SaveValues</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьНастройкиРегламентногоЗадания</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыполнитьРегламентноеЗадание" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить регламентное задание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить регламентное задание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ScheduledJob</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьРегламентноеЗадание</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>
