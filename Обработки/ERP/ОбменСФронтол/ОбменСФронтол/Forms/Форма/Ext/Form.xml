@@ -347,6 +347,12 @@
 									<ContextMenu name="КассыКассаКонтекстноеМеню" id="201"/>
 									<ExtendedTooltip name="КассыКассаРасширеннаяПодсказка" id="202"/>
 								</InputField>
+								<InputField name="КассыСклад" id="259">
+									<DataPath>Объект.Кассы.Склад</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="КассыСкладКонтекстноеМеню" id="260"/>
+									<ExtendedTooltip name="КассыСкладРасширеннаяПодсказка" id="261"/>
+								</InputField>
 							</ChildItems>
 						</Table>
 					</ChildItems>
