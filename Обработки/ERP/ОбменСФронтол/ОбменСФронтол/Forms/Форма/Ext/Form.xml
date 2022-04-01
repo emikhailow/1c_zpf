@@ -299,60 +299,94 @@
 									<ContextMenu name="КассыПометкаКонтекстноеМеню" id="88"/>
 									<ExtendedTooltip name="КассыПометкаРасширеннаяПодсказка" id="89"/>
 								</CheckBoxField>
-								<InputField name="КассыПодключаемоеОборудование" id="90">
-									<DataPath>Объект.Кассы.ПодключаемоеОборудование</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<DropListButton>false</DropListButton>
-									<ChoiceButton>false</ChoiceButton>
-									<ClearButton>false</ClearButton>
-									<SpinButton>false</SpinButton>
-									<OpenButton>true</OpenButton>
-									<CreateButton>false</CreateButton>
-									<TextEdit>false</TextEdit>
-									<ContextMenu name="КассыПодключаемоеОборудованиеКонтекстноеМеню" id="91"/>
-									<ExtendedTooltip name="КассыПодключаемоеОборудованиеРасширеннаяПодсказка" id="92"/>
-									<Events>
-										<Event name="AutoComplete">КассыПодключаемоеОборудованиеАвтоПодбор</Event>
-										<Event name="StartChoice">КассыПодключаемоеОборудованиеНачалоВыбора</Event>
-										<Event name="StartListChoice">КассыПодключаемоеОборудованиеНачалоВыбораИзСписка</Event>
-										<Event name="TextEditEnd">КассыПодключаемоеОборудованиеОкончаниеВводаТекста</Event>
-									</Events>
-								</InputField>
-								<InputField name="КассыКассаККМ" id="203">
-									<DataPath>Объект.Кассы.КассаККМ</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<DropListButton>false</DropListButton>
-									<ChoiceButton>false</ChoiceButton>
-									<ClearButton>false</ClearButton>
-									<SpinButton>false</SpinButton>
-									<OpenButton>true</OpenButton>
-									<CreateButton>false</CreateButton>
-									<TextEdit>false</TextEdit>
-									<ContextMenu name="КассыКассаККМКонтекстноеМеню" id="204"/>
-									<ExtendedTooltip name="КассыКассаККМРасширеннаяПодсказка" id="205"/>
-									<Events>
-										<Event name="StartChoice">КассыКассаККМНачалоВыбора</Event>
-									</Events>
-								</InputField>
-								<InputField name="КассыКасса" id="200">
-									<DataPath>Объект.Кассы.Касса</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<DropListButton>false</DropListButton>
-									<ChoiceButton>false</ChoiceButton>
-									<ClearButton>false</ClearButton>
-									<SpinButton>false</SpinButton>
-									<OpenButton>true</OpenButton>
-									<CreateButton>false</CreateButton>
-									<TextEdit>false</TextEdit>
-									<ContextMenu name="КассыКассаКонтекстноеМеню" id="201"/>
-									<ExtendedTooltip name="КассыКассаРасширеннаяПодсказка" id="202"/>
-								</InputField>
-								<InputField name="КассыСклад" id="259">
-									<DataPath>Объект.Кассы.Склад</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="КассыСкладКонтекстноеМеню" id="260"/>
-									<ExtendedTooltip name="КассыСкладРасширеннаяПодсказка" id="261"/>
-								</InputField>
+								<ColumnGroup name="КассыПодключаемоеОборудованиеСклад" id="264">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кассы подключаемое оборудование склад</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кассы подключаемое оборудование склад</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="КассыПодключаемоеОборудованиеСкладРасширеннаяПодсказка" id="265"/>
+									<ChildItems>
+										<InputField name="КассыПодключаемоеОборудование" id="90">
+											<DataPath>Объект.Кассы.ПодключаемоеОборудование</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>false</ChoiceButton>
+											<ClearButton>false</ClearButton>
+											<SpinButton>false</SpinButton>
+											<OpenButton>true</OpenButton>
+											<CreateButton>false</CreateButton>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="КассыПодключаемоеОборудованиеКонтекстноеМеню" id="91"/>
+											<ExtendedTooltip name="КассыПодключаемоеОборудованиеРасширеннаяПодсказка" id="92"/>
+											<Events>
+												<Event name="AutoComplete">КассыПодключаемоеОборудованиеАвтоПодбор</Event>
+												<Event name="StartChoice">КассыПодключаемоеОборудованиеНачалоВыбора</Event>
+												<Event name="StartListChoice">КассыПодключаемоеОборудованиеНачалоВыбораИзСписка</Event>
+												<Event name="TextEditEnd">КассыПодключаемоеОборудованиеОкончаниеВводаТекста</Event>
+											</Events>
+										</InputField>
+										<InputField name="КассыСклад" id="259">
+											<DataPath>Объект.Кассы.Склад</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="КассыСкладКонтекстноеМеню" id="260"/>
+											<ExtendedTooltip name="КассыСкладРасширеннаяПодсказка" id="261"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="КассыГруппаКассаКассаККМ" id="262">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кассы группа касса касса ККМ</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кассы группа касса касса ККМ</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="КассыГруппаКассаКассаККМРасширеннаяПодсказка" id="263"/>
+									<ChildItems>
+										<InputField name="КассыКассаККМ" id="203">
+											<DataPath>Объект.Кассы.КассаККМ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>false</ChoiceButton>
+											<ClearButton>false</ClearButton>
+											<SpinButton>false</SpinButton>
+											<OpenButton>true</OpenButton>
+											<CreateButton>false</CreateButton>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="КассыКассаККМКонтекстноеМеню" id="204"/>
+											<ExtendedTooltip name="КассыКассаККМРасширеннаяПодсказка" id="205"/>
+											<Events>
+												<Event name="StartChoice">КассыКассаККМНачалоВыбора</Event>
+											</Events>
+										</InputField>
+										<InputField name="КассыКасса" id="200">
+											<DataPath>Объект.Кассы.Касса</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<DropListButton>false</DropListButton>
+											<ChoiceButton>false</ChoiceButton>
+											<ClearButton>false</ClearButton>
+											<SpinButton>false</SpinButton>
+											<OpenButton>true</OpenButton>
+											<CreateButton>false</CreateButton>
+											<TextEdit>false</TextEdit>
+											<ContextMenu name="КассыКассаКонтекстноеМеню" id="201"/>
+											<ExtendedTooltip name="КассыКассаРасширеннаяПодсказка" id="202"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
 							</ChildItems>
 						</Table>
 					</ChildItems>
